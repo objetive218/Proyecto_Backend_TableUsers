@@ -1,30 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300&display=swap");
+
 * {
   padding: 0;
   margin: 0;
+}
+a {
+  text-decoration: none;
+  color: white;
 }
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
   margin-top: 5rem;
   font-size: 25px;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
 }
-.numeros {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+/*estilos tabla*/
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid rgb(69, 7, 7);
 }
+thead th:nth-child(1) {
+  width: 5%;
+}
+thead th:nth-child(2) {
+  width: 20%;
+}
+thead th:nth-child(3) {
+  width: 20%;
+}
+thead th:nth-child(4) {
+  width: 20%;
+}
+thead th:nth-child(5) {
+  width: 15%;
+}
+thead th:nth-child(6) {
+  width: 20%;
+}
+th,
+td {
+  padding: 15px;
+  background-color: lightcyan;
+}
+th {
+  letter-spacing: 2px;
+}
+td {
+  letter-spacing: 1px;
+}
+tbody td {
+  text-align: center;
+}
+thead {
+  background: url(leopardskin.jpg);
+  color: black;
+  text-shadow: 1px 1px 1px black;
+}
+
+thead th,
+tfoot th {
+  background: linear-gradient(
+    to bottom,
+    rgba(118, 10, 10, 0.1),
+    rgba(255, 253, 253, 0.5)
+  );
+  border: 3px solid black;
+}
+
 #oper {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.fila_p  td{
+.fila_p td {
 }
 #main {
-  width: 60%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+#main h1{
+  align-self: center;
+  padding: 20px;
+  font-size: 50px;
+
+}
+#barra{
+  width: 100%;
+  background-color: lightskyblue;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+}
+/*estilos tablas usuarios */
+#bttn1 {
+  background-color: rgb(44, 139, 255);
+  width: 6.5rem;
+  height: 1.5rem;
+}
+#bttn2 {
+  background-color: red;
+  width: 6.5rem;
+  height: 1.5rem;
 }
 
+/*estilos actualizar/usuarios*/
+.sec_form {
+  width: 600px;
+  height: auto;
+  background-color: lightcyan;
+  padding: 3rem;
+  justify-content: center;
+  border-radius: 12px;
+}
+.sec_form h1 {
+  margin-bottom: 30px;
+}
+.formato {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.formato button {
+  width: 150px;
+  height: 40px;
+  margin: 1rem;
+  background-color: lightseagreen;
+  align-self: center;
+  color: white;
+  font-size: 25px;
+}
+.formato input {
+  width: 600px;
+  height: 20px;
+  border-radius: 5px;
+}
+/*estilo boton tabla*/
+#bttn_add {
+  width: 150px;
+  height: 70px;
+  background-color: lightseagreen;
+  font-size: 30px;
+  margin-top: 1rem;
+  border-radius: 12px;
+}
