@@ -13,15 +13,16 @@ include "db/conexion.php";
 </head>
 <body>
   <section id="main">
-    
-      <button> <a href="usuario.php">Agregar Usuario</a></button>
+    <div id="barra">
+      <h1>Usuarios Ejemplo</h1>
+    </div>
       
         <table>
 
           <tbody class="fila_p">
             <thead>
               <tr>
-                <th>codigo</th>
+                <th>cod</th>
                 <th>Nombre</th>
                 <th>Email</th>
                 <th>celular</th>
@@ -48,8 +49,8 @@ include "db/conexion.php";
       <td>'.$celular.'</td>
       <td>'.$contraseña.'</td>
       <td>
-    <button class="bttn"><a href="actualizar.php?updateid='.$id.'">Actualizar</a></button>
-    <button class="bttn"><a href="borrar.php?deleteid='.$id.'">Borrar</a></button>
+    <button id="bttn1"><a href="actualizar.php?updateid='.$id.'">Actualizar</a></button>
+    <button id="bttn2"><a href="borrar.php?deleteid='.$id.'">Borrar</a></button>
   </td>
       </tr>';
     }
@@ -58,6 +59,7 @@ include "db/conexion.php";
   
 </tbody>
 </table>
+<button id="bttn_add"> <a href="usuario.php">Agregar Usuario</a></button>
 </section>
 </body>
 </html>

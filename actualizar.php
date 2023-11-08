@@ -35,18 +35,21 @@
   <title>crud</title>
 </head>
 <body>
-  <form  method="POST">
-      <div class="numeros">
+  <section class="sec_form">
+    <h1>Actualizacion de datos</h1>
+    <form  method="POST">
+      <div class="formato">
         <label for="name">Nombre</label>
-        <input type="text" name ="name" id="name"  value=<?php echo $nombre?> required />
+        <input type="text" name ="name"  value=<?php echo $nombre?> required />
         <label for="email">Correo</label>
-        <input type="email" name ="email" id="email"  value=<?php echo $correo?> required />
+        <input type="email" name ="email"  value=<?php echo $correo?> required />
         <label for="cel">Celular</label>
-        <input type="text" name ="cel" id="cel" value=<?php echo $celular?> required />
+        <input type="text" name ="cel"  value=<?php echo $celular?> required />
         <label for="password">Contraseña</label>
-        <input type="text" name ="password" id="password" value=<?php echo $contraseña?> required />
-      </div>
+        <input type="text" name ="password"  value=<?php echo $contraseña?> required />
         <button type="submit" name="submit">Actualizar</button>
+      </div>
     </form>
+  </section>
 </body>
 </html>

@@ -1,5 +1,6 @@
 <?php
   include 'db/conexion.php';
+
   if(isset($_POST['submit'])){
     $nombre=$_POST['name'];
     $correo=$_POST['email'];
@@ -8,8 +9,8 @@
     $sql="insert into `crud` (nombre,correo,celular,contraseña)
     values('$nombre','$correo','$celular','$contraseña')";
     $resultado= mysqli_query($conexion,$sql);
+
     if ($resultado) {
-      //echo "Datos agregados correctamente";
       header('location:tabla_usuarios.php');
   }else{
     die(mysqli_error($conexion));
@@ -27,18 +28,21 @@
   <title>crud</title>
 </head>
 <body>
-  <form  method="POST">
-      <div class="numeros">
+  <section class="sec_form">
+  <h1>Registro de usuarios</h1>
+    <form  method="POST">
+      <div class="formato">
         <label for="name">Nombre</label>
-        <input type="text" name ="name" id="name" placeholder="Ingrese su Nombre" required />
+        <input type="text" name ="name"  placeholder="Ingrese su Nombre" required />
         <label for="email">Correo</label>
-        <input type="email" name ="email" id="email" placeholder="Ingrese su Correo" required />
+        <input type="email" name ="email"  placeholder="Ingrese su Correo" required />
         <label for="cel">Celular</label>
-        <input type="text" name ="cel" id="cel" placeholder="Ingrese su numero celular" required />
+        <input type="text" name ="cel"  placeholder="Ingrese su numero celular" required />
         <label for="password">Contraseña</label>
-        <input type="text" name ="password" id="password" placeholder="Ingrese su contraseña" required />
-      </div>
+        <input type="text" name ="password"  placeholder="Ingrese su contraseña" required />
         <button type="submit" name="submit">Enviar</button>
+      </div>
     </form>
-</body>
-</html>
+  </section>
+  </body>
+  </html>
