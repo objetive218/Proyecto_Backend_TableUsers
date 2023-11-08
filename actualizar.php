@@ -20,7 +20,7 @@
     if ($resultado) {
       header('location:tabla_usuarios.php');
   }else{
-    die(mysqli_error($conexion));
+    exit(mysqli_error($conexion));
   }
   }
 
